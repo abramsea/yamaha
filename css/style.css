@@ -4,8 +4,19 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'GraphikLCG';
+    src: url('../fonts/graphikLC400.woff'), 
+}
+
+@font-face {
+    font-family: 'GraphikLCG-Semibold';
+    src: url('../fonts/graphikLC600.woff'), 
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'GraphikLCG', Helvetica;
+    font-weight: 400;
     background: #f9f9f9;
     color: #212121;
 }
@@ -14,6 +25,47 @@ body {
     max-width: 1366px;
     background: #dedede;
     margin: 0 auto;
+}
+
+.header {
+    background: #dedede;
+}
+
+.logo-pult {
+   width: 350px;
+   margin-left: 100px;
+   padding: 10px;
+   display: inline-block;
+}
+
+
+.nav {
+    display: flex;
+    border-top: 1px solid #c1c1c1;
+}
+
+.nav a {
+    color: #343741;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 3px solid #dedede;
+    text-decoration: none;
+    margin: auto;
+}
+
+.blue {
+    color: #4cc7e9;
+}
+
+.nav a:hover {
+    border-bottom: 3px solid #4cc7e9;
+    color: #4cc7e9;
+}
+
+.nav .icon {
+    display: none;
 }
 
 .block {
@@ -35,6 +87,7 @@ body {
     max-width: 680px;
     font-size: 20px;
     line-height: 32px;
+    font-family: 'GraphikLCG-Semibold', Helvetica;
     font-weight: 600;
     text-align: left;
 }
@@ -47,14 +100,20 @@ body {
 .recommend-title {
     font-size: 40px;
     line-height: 64px;
+    font-family: 'GraphikLCG-Semibold', Helvetica;
     font-weight: 600;
 }
 
 .b03 {
     width: 90%;
-    background: linear-gradient(145deg, #e06294, #b57cd6);
+    /* background: linear-gradient(145deg, #e06294, #b57cd6); */
+    background: linear-gradient(145deg, #fff, #00caf0, #087694);
     margin: 0 auto 150px auto;
     padding: 0 0 30px 0;
+}
+
+.gradient-reverse {
+    background: linear-gradient(145deg, #087694, #00caf0, #fff);
 }
 
 .product-row {
@@ -124,6 +183,7 @@ body {
 .info-title {
     font-size: 20px;
     line-height: 22px;
+    font-family: 'GraphikLCG-Semibold', Helvetica;
     font-weight: 600;
     padding-bottom: 22px;
 }
@@ -131,7 +191,6 @@ body {
 .info-text {
     font-size: 14px;
     line-height: 22px;
-    font-weight: 400;
     padding-bottom: 22px;
 }
 
@@ -156,7 +215,7 @@ body {
 }
 
 .info-block-airplay {
-   background: #cecece; 
+   background: #00caf0; 
 }
 
 .mw60 {
@@ -262,6 +321,58 @@ body {
 
 
 @media screen and (max-width: 690px) {
+    .logo-pult {
+        display: block;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .nav a {
+        display: none;
+    }
+
+    .nav{
+        display: block;
+    }
+
+    .nav a.icon {
+        float: right;
+        margin-top: -70px;
+        display: block;
+        font-size: 25px;
+        border: none;
+    }
+
+    .nav.responsive {
+        position: relative;
+        top: 50px;
+    }
+
+    .header .nav.responsive {
+        height: 335px;
+    }
+
+    .nav.responsive a.icon {
+        position: absolute;
+        top: -50px;
+        right: 0px;
+    }
+
+    .nav.responsive a {
+        float: none;
+        display: block;
+        text-align: right;
+        border: none;
+    }
+
+    .nav a:hover {
+        border: none;
+    }
+
+    .nav .icon {
+        display: block;
+    }
+
     .block {
         padding-left: 50px;
         padding-right: 50px;
@@ -281,6 +392,7 @@ body {
         text-align: justify;
         font-size: 16px;
         line-height: 28px;
+        font-family: 'GraphikLCG', Helvetica;
         font-weight: 400;
     }
 
@@ -288,6 +400,13 @@ body {
         padding: 100px 0;
         font-size: 20px;
         line-height: 30px;
+    }
+
+    .recommend-title {
+        font-size: 25px;
+        line-height: 40px;
+        font-family: 'GraphikLCG', Helvetica;
+        font-weight: 400;
     }
 
     .b03 {
@@ -304,7 +423,7 @@ body {
     .product {
         min-width: 100%;
         margin: 70px 0;
-        background: linear-gradient(145deg, #e06294, #b57cd6);
+        background: linear-gradient(145deg, #fff, #00caf0, #087694);
     }
 
     .product-img, .product-title, .button-buy {
@@ -382,6 +501,14 @@ body {
 
 
 @media screen and (max-width: 420px) {
+    .logo-pult {
+        max-width: 250px;
+    }
+
+    .nav a.icon {
+        margin-top: -60px;
+    }
+
     .block {
         padding-left: 20px;
         padding-right: 20px;
